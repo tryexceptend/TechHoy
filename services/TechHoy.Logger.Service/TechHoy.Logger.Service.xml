@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TechHoy.Logger.Service</name>
+    </assembly>
+    <members>
+        <member name="T:TechHoy.Logger.LogMessagesController.LogMessagesController">
+            <summary>
+            Контроллер доступа к логам
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TechHoy.Logger.LogMessagesController.LogMessagesController.#ctor(TechHoy.Logger.LogMessagesController.LogMessagesContext)">
+            <summary>
+            Контроллер доступа к логам
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TechHoy.Logger.LogMessagesController.LogMessagesController.AddMessageAsync(TechHoy.Logging.LogMessage)">
+            <summary>
+            Добавить запись в лог
+            </summary>
+            <param name="logMessage">Сообщение</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

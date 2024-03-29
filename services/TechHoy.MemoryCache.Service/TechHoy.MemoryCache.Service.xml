@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TechHoy.MemoryCache.Service</name>
+    </assembly>
+    <members>
+        <member name="T:TechHoy.MemoryCache.Service.Test.TestController">
+            <summary>
+            Контроллер доступа к логам
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TechHoy.MemoryCache.Service.Test.TestController.#ctor(Microsoft.Extensions.Logging.ILogger{TechHoy.MemoryCache.Service.Test.TestController})">
+            <summary>
+            Контроллер доступа к логам
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TechHoy.MemoryCache.Service.Test.TestController.LogAsync">
+            <summary>
+            Добавить запись в лог
+            </summary>
+            <param name="logMessage">Сообщение</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
