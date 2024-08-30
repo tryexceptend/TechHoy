@@ -39,9 +39,9 @@ public class SimulatorDriver : IIODriver
     public void Init(IODriverConfig config)
     {
         if (config is null) return;
-        if (config.Keys.ContainsKey("MIN_INT")) _minInt = (int)config.Keys["MIN_INT"];
-        if (config.Keys.ContainsKey("MAX_INT")) _maxInt = (int)config.Keys["MAX_INT"];
-        if (config.Keys.ContainsKey("MIN_DBL")) _minDbl = (double)config.Keys["MIN_DBL"];
-        if (config.Keys.ContainsKey("MAX_DBL")) _minDbl = (double)config.Keys["MAX_DBL"];
+        if (config.Keys.ContainsKey("MIN_INT")) _minInt = int.Parse(config.Keys["MIN_INT"] as string);
+        if (config.Keys.ContainsKey("MAX_INT")) _maxInt = int.Parse(config.Keys["MAX_INT"] as string);
+        if (config.Keys.ContainsKey("MIN_DBL")) _minDbl = double.Parse(config.Keys["MIN_DBL"] as string);
+        if (config.Keys.ContainsKey("MAX_DBL")) _minDbl = double.Parse(config.Keys["MAX_DBL"] as string);
     }
 }

@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using TechHoy.Domain.IODrivers;
 using TechHoy.Infrastructure.IODrivers;
@@ -16,6 +17,7 @@ if (settings is null) return;
 
 List<IIODriver> drivers = new(settings.Count());
 IODriverFactory factory = new IODriverFactory();
+
 
 foreach(var setting in settings){
     var driver = factory.FactoryMethod(setting);
@@ -36,3 +38,4 @@ for(int i =0; i<10; i++){
     }
     await Task.Delay(1000);
 }
+Console.WriteLine("End");
