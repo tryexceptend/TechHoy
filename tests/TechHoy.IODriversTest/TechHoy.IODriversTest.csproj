@@ -1,11 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\libs\IODrivers\IODriver.Simulator\IODriver.Simulator.csproj" />
-    <ProjectReference Include="..\..\..\libs\IODrivers\IODrivers.Manager\IODrivers.Manager.csproj" />
-    <ProjectReference Include="..\..\..\libs\TechHoy.Infrastructure.IODrivers\IODriver.Simulator\IODriver.Simulator.csproj" />
-    <ProjectReference Include="..\..\..\libs\TechHoy.Domain.IODrivers\TechHoy.Domain.IODrivers.csproj" />
-    <ProjectReference Include="..\..\..\libs\TechHoy.Infrastructure.IODrivers\IODrivers.Manager\IODrivers.Manager.csproj" />
+    <ProjectReference Include="..\..\libs\IODrivers\IODriver.Simulator\IODriver.Simulator.csproj" />
+    <ProjectReference Include="..\..\libs\IODrivers\IODrivers.Manager\IODrivers.Manager.csproj" />
+    <ProjectReference Include="..\..\libs\TechHoy.Domain.IODrivers\TechHoy.Domain.IODrivers.csproj" />
   </ItemGroup>
 
   <ItemGroup>
