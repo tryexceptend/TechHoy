@@ -1,5 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using TechHoy.Domain.IODrivers;
 using TechHoy.Infrastructure.IODrivers;
@@ -16,10 +15,11 @@ IODriverConfig[]? settings = config.GetRequiredSection("IODriverSettings").Get<I
 if (settings is null) return;
 
 List<IIODriver> drivers = new(settings.Count());
-IODriverFactory factory = new IODriverFactory();
+IIODriverFactory factory = new IODriverFactory();
 
 
-foreach(var setting in settings){
+foreach (var setting in settings)
+{
     var driver = factory.FactoryMethod(setting);
     if (driver is not null) drivers.Add(driver);
 }
@@ -29,10 +29,13 @@ List<BaseIOAddress> addresses = new(){
     new BaseIOAddress("b1")
 };
 
-for(int i =0; i<10; i++){
-    foreach(var driver in drivers){
+for (int i = 0; i < 10; i++)
+{
+    foreach (var driver in drivers)
+    {
         var values = driver.GetValuesAsync(addresses);
-        await foreach(var val in values){
+        await foreach (var val in values)
+        {
             Console.WriteLine($"{val.IOAddress.Address} - {val.GetVaue()}");
         }
     }

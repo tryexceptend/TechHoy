@@ -8,7 +8,7 @@ public class SimulatorDriver : IIODriver
     private int _minInt = 0;
     private int _maxInt = 100;
     private double _minDbl = 0;
-    private double _maxDbl = 1; 
+    private double _maxDbl = 1;
     public string GetDescription()
     {
         return "Simulator random value driver";
@@ -16,20 +16,26 @@ public class SimulatorDriver : IIODriver
 
     public async IAsyncEnumerable<BaseIOValue> GetValuesAsync(IEnumerable<BaseIOAddress> addresses)
     {
-        foreach(var address in addresses){
-            if (address.Address[0] == 'b'){
-                BaseIOAddressValue<bool> res_b = new BaseIOAddressValue<bool>(address, IOAddressValueState.Valide){
-                    Value = _random.Next(100)>50
+        foreach (var address in addresses)
+        {
+            if (address.Address[0] == 'b')
+            {
+                BaseIOAddressValue<bool> res_b = new BaseIOAddressValue<bool>(address, IOAddressValueState.Valide)
+                {
+                    Value = _random.Next(100) > 50
                 };
                 yield return res_b;
             }
-            if (address.Address[0] == 'd'){
-                BaseIOAddressValue<double> res_d = new BaseIOAddressValue<double>(address, IOAddressValueState.Valide){
-                    Value = _random.NextDouble()* (_maxDbl - _minDbl) + _minDbl
+            if (address.Address[0] == 'd')
+            {
+                BaseIOAddressValue<double> res_d = new BaseIOAddressValue<double>(address, IOAddressValueState.Valide)
+                {
+                    Value = _random.NextDouble() * (_maxDbl - _minDbl) + _minDbl
                 };
                 yield return res_d;
             }
-            BaseIOAddressValue<int> res_i = new BaseIOAddressValue<int>(address, IOAddressValueState.Valide){
+            BaseIOAddressValue<int> res_i = new BaseIOAddressValue<int>(address, IOAddressValueState.Valide)
+            {
                 Value = _random.Next(_minInt, _maxInt)
             };
             yield return res_i;
