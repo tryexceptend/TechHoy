@@ -1,4 +1,4 @@
-namespace TechHoy.Infrastructure.IODrivers
+namespace TechHoy.Domain.IODrivers
 {
     public static class IODriverConstant
     {

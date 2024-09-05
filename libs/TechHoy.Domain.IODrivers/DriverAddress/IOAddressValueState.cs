@@ -1,4 +1,4 @@
-namespace TechHoy.Domain.IODrivers
+namespace TechHoy.Domain.IODrivers.DriverAddress
 {
     public enum IOAddressValueState
     {
