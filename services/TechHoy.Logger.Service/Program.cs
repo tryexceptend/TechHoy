@@ -7,7 +7,11 @@ using System.Security.Authentication;
 using TechHoy.Logger.LogMessagesController;
 using TechHoy.Logger.Service.HealthController;
 
-var configuration = new ConfigurationBuilder().AddJsonFile($"appsettings.json").Build();
+string environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+var configuration = new ConfigurationBuilder()
+                        .AddJsonFile($"appsettings.json")
+                        .AddJsonFile($"appsettings." + environment + ".json")
+                        .Build();
 
 var builder = WebApplication.CreateBuilder(args);
 
